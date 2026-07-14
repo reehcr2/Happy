@@ -1,0 +1,33 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
+    "migration:generate": "typeorm-ts-node-commonjs migration:generate -d src/database/connection.ts",
+    "migration:run": "typeorm-ts-node-commonjs migration:run -d src/database/connection.ts",
+    "migration:revert": "typeorm-ts-node-commonjs migration:revert -d src/database/connection.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.10.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-async-errors": "^3.1.1",
+    "multer": "^2.1.1",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^1.0.0",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.1.0",
+    "@types/node": "^25.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^6.0.3"
+  }
+}

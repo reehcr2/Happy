@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Environment Settings
+    "module": "commonjs",
+    "target": "es2017",
+    "lib": ["es2017"],
+    "types": ["node"],
+
+    // TypeORM precisa disso
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "strict": true,
+    "skipLibCheck": true
+
+    // Remover esses — incompatíveis com commonjs
+    // "verbatimModuleSyntax": true,   ← causava o erro
+    // "isolatedModules": true,
+    // "noUncheckedSideEffectImports": true,
+    // "moduleDetection": "force",
+  }
+}
